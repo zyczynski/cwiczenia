@@ -33,7 +33,7 @@ class Users{
 $user1 = new Users("Bartek", 32);
 $user2 = new Users("Piotrek", 31);
 
-
+//jakaś strasznie istotna zmiana 
 
 
 ?>
