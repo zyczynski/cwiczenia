@@ -21,4 +21,5 @@ include 'Person.php';
 		echo "Jesli Piotrek bedzie mial urodziny skonczy " . $user2 -> urodziny() . " lata";
 		//Jeszcze jedna ważna zmiana
 		
+		
 ?>
