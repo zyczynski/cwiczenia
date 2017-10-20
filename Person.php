@@ -19,7 +19,7 @@ class Users{
 	
 	public function showPrivateAge(){
 		
-		echo $this -> age;
+		return $this -> age;
 	}
 	
 	public function urodziny(){
@@ -30,10 +30,36 @@ class Users{
 	
 }
 
+
+
 $user1 = new Users("Bartek", 32);
 $user2 = new Users("Piotrek", 31);
+$wiekB = $user1 -> showPrivateAge();
+$wiekP = $user2 -> showPrivateAge();
 
-//jakaś strasznie istotna zmiana 
+
+$year = new DateTime();
+$aktualnyRok = $year->format('Y');
+
+class AgeCalculator{
+	public $birth;
+	
+	public function CalculateAge(){
+		
+		$ybirth = ($aktualnyRok - $wiekB);
+		$this -> birth = $ybirth;
+	}
+	
+	public function YearOfBirth(){
+		echo $this -> birth;
+	}
+	
+}
+
+$birthB = new AgeCalculator;
+$birthB -> YearOfBirth();
+	
+
 
 
 ?>
