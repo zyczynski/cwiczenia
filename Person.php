@@ -32,34 +32,33 @@ class Users{
 
 
 
-$user1 = new Users("Bartek", 32);
-$user2 = new Users("Piotrek", 31);
-$wiekB = $user1 -> showPrivateAge();
-$wiekP = $user2 -> showPrivateAge();
+		$user1 = new Users("Bartek", 32);
+		$user2 = new Users("Piotrek", 31);
+ 
+		$wiekB = $user1 -> showPrivateAge();
+		$wiekP = $user2 -> showPrivateAge();
 
 
-$year = new DateTime();
-$aktualnyRok = $year->format('Y');
+		$year = new DateTime();
+		$aktualnyRok = $year->format('Y');
 
-class AgeCalculator{
-	public $birth;
-	
-	public function CalculateAge(){
+	class AgeCalculator{
+		public $birth;
 		
-		$ybirth = ($aktualnyRok - $wiekB);
-		$this -> birth = $ybirth;
+		public function CalculateAge(){
+			
+			$ybirth = ($aktualnyRok - $wiekB);
+			$this -> birth = $ybirth;
+		}
+		
+		public function YearOfBirth(){
+			echo $this -> birth;
+		}
+		
 	}
-	
-	public function YearOfBirth(){
-		echo $this -> birth;
-	}
-	
-}
 
 $birthB = new AgeCalculator;
 $birthB -> YearOfBirth();
-	
-
 
 
 ?>
