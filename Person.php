@@ -32,7 +32,7 @@ class Users{
 
 
 
-		$user1 = new Users("Bartek", 32);
+		/* $user1 = new Users("Bartek", 32);
 		$user2 = new Users("Piotrek", 31);
  
 		$wiekB = $user1 -> showPrivateAge();
@@ -58,8 +58,13 @@ class Users{
 	}
 
 $birthB = new AgeCalculator;
-$birthB -> YearOfBirth();
+$birthB -> YearOfBirth(); */
 
-
+	function Oblicz($wiek, $aktualnyRok){
+		$rokUrodzenia = ($aktualnyRok - $wiek);
+		echo $rokUrodzenia;
+	}
+	Oblicz(32, 2017);
+	
 ?>
 		
